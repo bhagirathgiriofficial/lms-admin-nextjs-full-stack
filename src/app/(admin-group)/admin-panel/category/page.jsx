@@ -1,13 +1,14 @@
+import DeleteBtn from "@/components/admin/DeleteBtn";
 import PageHeader from "@/components/admin/PageHeader";
 import { getCategories } from "@/library/api-calls";
-import { FaEdit, FaTrash } from "react-icons/fa";
+import { FaEdit } from "react-icons/fa";
 
 async function CategoryPage() {
     const categories = await getCategories();
     return (
         <div className="bg-white text-gray-800 min-h-screen container mx-auto px-4 sm:px-8">
             <div className="py-8">
-               <PageHeader paths={["Dashboard","Category"]} button={{text:"Add", link:"/admin-panel/category/add"}}/>
+                <PageHeader paths={["Dashboard", "Category"]} button={{ text: "Add", link: "/admin-panel/category/add" }} />
                 <div className="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
                     <div className="inline-block min-w-full shadow-md rounded-lg overflow-hidden">
                         <table className="min-w-full leading-normal">
@@ -49,9 +50,7 @@ async function CategoryPage() {
                                             <button className="text-blue-500 hover:text-blue-700 mr-3">
                                                 <FaEdit />
                                             </button>
-                                            <button className="text-red-500 hover:text-red-700">
-                                                <FaTrash />
-                                            </button>
+                                            <DeleteBtn endpoint={`/category/delete/${category._id}`} />
                                         </td>
                                     </tr>
                                 ))}
