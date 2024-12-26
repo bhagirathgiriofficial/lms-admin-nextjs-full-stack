@@ -8,5 +8,13 @@ const getCategories = () => {
             return [];
         });
 };
+const getCourses = () => {
+    return axiosInstance.get("/course")
+        .then(response => response.data.courses)
+        .catch(error => {
+            console.error(error);
+            return [];
+        });
+}
 
-export { getCategories };
+export { getCategories, getCourses };

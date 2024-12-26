@@ -10,8 +10,10 @@ export default function DeleteBtn({ endpoint }) {
     const router = useRouter();
 
     const deleteHandler = () => {
+        toast.loading("Deleting...");
         axiosInstance.delete(endpoint)
             .then(response => {
+                toast.dismiss();
                 if (response.data.flag == 1) {
                     router.refresh();
                     toast.success(response.data.message);

@@ -5,14 +5,14 @@ import { FaUserGraduate, FaBook, FaTags, FaUsers, FaChalkboardTeacher, FaDashcub
 const SideMenu = () => {
     const menuItems = [
         { icon: FaDashcube, label: "Dashboard", link: "/admin-panel" },
-        { icon: FaUserGraduate, label: "Learners", link: "/admin-panel/learners" },
-        { icon: FaBook, label: "Courses", link: "/admin-panel/courses" },
+        { icon: FaUserGraduate, label: "Learners", link: "/admin-panel/learner" },
+        { icon: FaBook, label: "Courses", link: "/admin-panel/course" },
         { icon: FaTags, label: "Category", link: "/admin-panel/category" },
-        { icon: FaUsers, label: "Cohorts", link: "/admin-panel/cohorts" },
-        { icon: FaChalkboardTeacher, label: "Mentors", link: "/admin-panel/mentors" },
+        { icon: FaUsers, label: "Cohorts", link: "/admin-panel/cohort" },
+        { icon: FaChalkboardTeacher, label: "Mentors", link: "/admin-panel/mentor" },
     ];
     return (
-        <div className="h-screen bg-gray-800 text-white flex flex-col">
+        <div className="min-h-screen bg-gray-800 text-white flex flex-col">
             <div className="flex items-center justify-center h-20 border-b border-gray-700">
                 <h1 className="text-2xl font-bold">Admin Panel</h1>
             </div>

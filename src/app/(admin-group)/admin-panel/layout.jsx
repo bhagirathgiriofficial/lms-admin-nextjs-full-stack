@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Toaster position="bottom-center" toastOptions={{duration:5000}}/>
+        <Toaster position="top-center" toastOptions={{duration:3000}}/>
         <div className="grid grid-cols-5">
           <SideMenu />
           <div className="col-span-4">
